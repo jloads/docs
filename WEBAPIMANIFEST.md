@@ -9,3 +9,28 @@ After it’s all said and done, your manifest should look similar to this:
 A sample web application manifest
 
 By creating a manifest, we are polishing up our web application and making it behave more like it should. This is only the beginning, though, on or web application’s way to become a progressive web app.
+
+
+{
+  "name": "Mockup Progressive Web App",
+  "short_name": "Mock PWA",
+  "description": "A mock progressive web app built with React and mini.css.",
+  "lang": "en-US",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "theme_color": "#1a237e",
+  "icons": [
+    {
+      "src": "\/android-icon-48x48.png",
+      "sizes": "48x48",
+      "type": "image\/png",
+      "density": "1.0"
+    },
+    {
+      "src": "\/android-icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image\/png",
+      "density": "1.5"
+    }
+  ]
+}
