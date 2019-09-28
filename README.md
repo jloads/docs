@@ -1,6 +1,21 @@
 # docs
 How it works, how tu use it
 
+# docs
+Documentation in many languages
+
+## Cel
+Służy do generowania i przetwarzania architektury aplikacji.
+Dba o migracje: upgrade, downgrade aplikacji.
+
+W chwili obecnej jest stworzona wersja wspierająca frontend.
+
+### JS
+Biblioteka napisana w JavaScript ma możliwość ładowania modułów w celu generowania aplikacji w trybie online z wielu źródeł.
+Dzięki wsparciu asynchronicznego ładowania możliwe jest dynamiczne ładowanie i zmienianie treści w trakcie używania przez użytkownika.
+Nie trzeba od razu ładować wszystkich modułów
+Zamiat przeładowania strony można na bieżąco pobierać i usuwać dane z widoku przeglądarki.
+
 
 
 [PL]
