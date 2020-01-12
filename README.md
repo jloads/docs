@@ -8,7 +8,7 @@ UnitApi is a loading system for files on frontend side - live loader for any con
 + json
 + ...
 
-![UnitApi logo](unitapi_logo.png)
+![UnitApi logo](unitapi-logo-128.png)
 
 + [unitapi.com](https://unitapi.com/)
 + [blog.unitapi.com](https://blog.unitapi.com/)
