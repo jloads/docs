@@ -1,5 +1,5 @@
 # UnitApi documentation :cloud:
-UnitApi is a loading system for files on frontend side, used as live loader of any content:
+UnitApi is a loading system for files on frontend side - live loader for any content
 + js
 + css
 + images
