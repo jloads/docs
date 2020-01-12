@@ -1,7 +1,5 @@
 ![UnitApi logo](unitapi-logo-128.png)
 
-# UnitApi
-
 + [unitapi.com](https://unitapi.com/)
 + [blog.unitapi.com](https://blog.unitapi.com/)
 + [repositories on github](https://github.com/unitapi)
