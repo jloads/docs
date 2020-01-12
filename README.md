@@ -1,8 +1,29 @@
-# docs
-How it works, how tu use it
+# UnitApi documentation :cloud:
+UnitApi is a Packaging system for files on frontend side, used as live loader of any content:
++ js
++ css
++ images
++ html
++ xml
++ json
++ ...
 
-# docs
-Documentation in many languages
+![UnitApi logo](unitapi_logo.png)
+
++ [unitapi.com](https://unitapi.com/)
++ [blog.unitapi.com](https://blog.unitapi.com/)
++ [repositories on github](https://github.com/unitapi)
+
+##  For what?
+Standardisation for modularisation & automatisation
+
+## For Whom?
+DEvelopers, which are interested for making faster and more clear modularisation to reuse own code many time in many places:
+
+
+
+## Where it Works?
+On any browser which are supported javascripts
 
 ## Cel
 Służy do generowania i przetwarzania architektury aplikacji.
