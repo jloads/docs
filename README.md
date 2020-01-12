@@ -1,6 +1,6 @@
 ![UnitApi logo](unitapi-logo-128.png)
 
-# UnitApi documentation
+# UnitApi
 
 + [unitapi.com](https://unitapi.com/)
 + [blog.unitapi.com](https://blog.unitapi.com/)
