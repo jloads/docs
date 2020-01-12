@@ -1,4 +1,13 @@
-# UnitApi documentation :cloud:
+![UnitApi logo](unitapi-logo-128.png)
+
+# UnitApi documentation
+
++ [unitapi.com](https://unitapi.com/)
++ [blog.unitapi.com](https://blog.unitapi.com/)
++ [repositories on github](https://github.com/unitapi)
+
+##  For what?
+Standardisation for modularisation & automatisation
 UnitApi is a loading system for files on frontend side - live loader for any content
 + js
 + css
@@ -8,14 +17,6 @@ UnitApi is a loading system for files on frontend side - live loader for any con
 + json
 + ...
 
-![UnitApi logo](unitapi-logo-128.png)
-
-+ [unitapi.com](https://unitapi.com/)
-+ [blog.unitapi.com](https://blog.unitapi.com/)
-+ [repositories on github](https://github.com/unitapi)
-
-##  For what?
-Standardisation for modularisation & automatisation
 
 ## For Whom?
 DEvelopers, which are interested for making faster and more clear modularisation to reuse own code many time in many places:
