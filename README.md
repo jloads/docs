@@ -1,12 +1,12 @@
-![UnitApi logo](unitapi-logo-128.png)
+![jloads logo](jloads-logo-128.png)
 
-+ [unitapi.com](https://unitapi.com/)
-+ [blog.unitapi.com](https://blog.unitapi.com/)
-+ [repositories on github](https://github.com/unitapi)
++ [jloads.com](https://jloads.com/)
++ [blog.jloads.com](https://blog.jloads.com/)
++ [repositories on github](https://github.com/jloads)
 
 ##  For what?
 Standardisation for modularisation & automatisation
-UnitApi is a loading system for files on frontend side - live loader for any content
+jloads is a loading system for files on frontend side - live loader for any content
 + js
 + css
 + images
