@@ -3,7 +3,7 @@
 
 ![logo.jloads.com](https://logo.jloads.com/6/cover.png)
 
-# [Biblioteka jLoads](https://get.jloads.com/README.md)
+# [Biblioteka jLoads](https://docs.jloads.com/README.md)
 + jLoads oferuje streamowanie interfejsu aplikacji w natywnym JS 
 
 + jLoads wspiera natywne rozwiązania, ułatwia pracę z kodem zastanym (legacy code)
