@@ -12,7 +12,6 @@ only for old school javascript developers
 Are you for legacy code ready?
 
 + let's try with jLoads
-
      
 
 ## [Biblioteka jLoads](https://docs.jloads.com)
@@ -33,19 +32,14 @@ Are you for legacy code ready?
  
 ## How to use? 
 
-1 [download jloads.js
++ Load to Your project [get.jloads.com/jloads.min.js](https://get.jloads.com/jloads.min.js)
 
-OR 
-
-1b. Load to Your project
-
-
-       <script src="[//get.jloads.com/jloads.min.js](https://get.jloads.com/jloads.min.js)">
+       <script src="//get.jloads.com/jloads.min.js">
            // Jloads is loading any media and content dynamically
        </script>
 
 
-2. Add dependences, example with jquery and bootstrap, asynchronus, without special tags, only jloads logic to controll JS loading
++ Add dependences, example with jquery and bootstrap, asynchronus, without special tags, only jloads logic to controll JS loading
 
 
        <script>
