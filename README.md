@@ -4,7 +4,8 @@
 ![logo.jloads.com](https://logo.jloads.com/6/cover.png)
 
 # stay native and react faster!
-# [Biblioteka jLoads](https://docs.jloads.com/README.html)
+
+## [Biblioteka jLoads](https://docs.jloads.com/README.html)
 + jLoads oferuje streamowanie interfejsu aplikacji w natywnym JS 
 
 + jLoads wspiera natywne rozwiązania, ułatwia pracę z kodem zastanym (legacy code)
