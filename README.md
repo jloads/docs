@@ -50,7 +50,7 @@ Obecnie rozwiązanie jLoads dotyczy frontendu, ale trwają pracę nad wykorzysta
 + asynchronus, without special tags, only jloads logic to controll JS loading
 
 
-       <script src="//get.jloads.com/jloads.min.js">
+       <script>
            jl.file({
                "//code.jquery.com/jquery-3.5.1.min.js": [
                    "//stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js",
