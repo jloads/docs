@@ -5,6 +5,13 @@
 
 # stay native and react faster!
 only for old school javascript developers
++ JSON definition
++ native JS code over framework's
++ modularisation over refactoring
+
+     
+      legacyCodeReady( true )
+     
 
 ## [Biblioteka jLoads](https://docs.jloads.com)
 + jLoads oferuje streamowanie interfejsu aplikacji w natywnym JS 
