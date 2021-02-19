@@ -15,15 +15,21 @@ Are you for legacy code ready?
      
 
 ## [Biblioteka jLoads](https://docs.jloads.com)
-+ jLoads oferuje streamowanie interfejsu aplikacji w natywnym JS 
 
-+ jLoads wspiera natywne rozwiązania, ułatwia pracę z kodem zastanym (legacy code)
++ oferuje streamowanie interfejsu aplikacji
 
-+ jLoads został stworzony dla programistów szukających prostych rozwiązań, by ułatwić modularyzację aplikacji
++ wspiera natywne rozwiązania, dzięki temu ułatwia rozwój projektów z tzw. kodem zastanym (legacy code)
 
-+ jLoads wspiera proces refaktoryzacji, gdyż pozwala poprzez modularyzację ominięcie pułapek stojących za najnowszymi wersjami frameworków oraz troszczeniem się o ich aktualizacje.
++ stworzony dla programistów szukających prostych rozwiązań nastawionych na utrzymanie starszych aplikacji
 
-+ Obecnie rozwiązanie jLoads dotyczy frontendu, ale trwają pracę nad wykorzystaniem NodeJS do wsparcia backendu.
++ zorientowany na modularyzację oraz płaską ale rozproszoną strukturę projektu
+
++ wspiera proces refaktoryzacji, modularyzacja pozwala na szybkie wdrożenie, dając gwarancję zgodnego, bo natywnego kodu na dekady
+
++ modularyzacja pozwala na stosowanie najnowszych rozwiązań i ominięcie pułapek stojących za frameworkami z ich aktualizacją
+
+Obecnie rozwiązanie jLoads dotyczy frontendu, ale trwają pracę nad wykorzystaniem NodeJS do wsparcia backendu, co pozwoli na uruchomienie kodu bez opóźnieniea wynikającego z ładowania plików po załadowaniu strony.
+
 
 ## More ...
  + [All projects on github](https://github.com/jloads/)
