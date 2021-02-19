@@ -46,18 +46,18 @@ Obecnie rozwiązanie jLoads dotyczy frontendu, ale trwają pracę nad wykorzysta
 
  
 ### [Example dependencies](https://docs.jloads.com/test.html) 
-     + first is loaded jquer and after bootstrap files
-     + asynchronus, without special tags, only jloads logic to controll JS loading
++ first is loaded jquer and after bootstrap files
++ asynchronus, without special tags, only jloads logic to controll JS loading
 
 
-            <script src="//get.jloads.com/jloads.min.js">
-                jl.file({
-                    "//code.jquery.com/jquery-3.5.1.min.js": [
-                        "//stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js",
-                        "//stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-                    ]
-                });
-            </script>
+       <script src="//get.jloads.com/jloads.min.js">
+           jl.file({
+               "//code.jquery.com/jquery-3.5.1.min.js": [
+                   "//stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js",
+                   "//stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+               ]
+           });
+       </script>
 
 
 
