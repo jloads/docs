@@ -38,14 +38,14 @@ Obecnie rozwiązanie jLoads dotyczy frontendu, ale trwają pracę nad wykorzysta
  
 ## How to use? 
 
-+ Load to Your project [get.jloads.com/jloads.min.js](https://get.jloads.com/jloads.min.js)
+### Load to Your project [get.jloads.com/jloads.min.js](https://get.jloads.com/jloads.min.js)
 
        <script src="//get.jloads.com/jloads.min.js">
            // Jloads is loading any media and content dynamically
        </script>
 
-
-+ Example dependencies
+ 
+### [Example dependencies](https://docs.jloads.com/test.html) 
      + first is loaded jquer and after bootstrap files
      + asynchronus, without special tags, only jloads logic to controll JS loading
 
