@@ -6,7 +6,7 @@
 # stay native and react faster!
 only for old school javascript developers
 
-## [Biblioteka jLoads](https://docs.jloads.com/README.html)
+## [Biblioteka jLoads](https://docs.jloads.com)
 + jLoads oferuje streamowanie interfejsu aplikacji w natywnym JS 
 
 + jLoads wspiera natywne rozwiązania, ułatwia pracę z kodem zastanym (legacy code)
