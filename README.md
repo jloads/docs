@@ -9,8 +9,10 @@ only for old school javascript developers
 + native JS code over framework's
 + modularisation over refactoring
 
-     
-      legacyCodeReady( true )
+Are you for legacy code ready?
+
++ let's try with jLoads
+
      
 
 ## [Biblioteka jLoads](https://docs.jloads.com)
