@@ -33,14 +33,14 @@ Are you for legacy code ready?
  
 ## How to use? 
 
-1a. [download jloads.js](https://get.jloads.com/jloads.min.js)
+1 [download jloads.js
 
 OR 
 
 1b. Load to Your project
 
 
-       <script src="//get.jloads.com/jloads.min.js">
+       <script src="[//get.jloads.com/jloads.min.js](https://get.jloads.com/jloads.min.js)">
            // Jloads is loading any media and content dynamically
        </script>
 
