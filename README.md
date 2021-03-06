@@ -35,7 +35,12 @@ Obecnie rozwiązanie jLoads dotyczy frontendu, ale trwają pracę nad wykorzysta
  + [All projects on github](https://github.com/jloads/)
  + [jLoads on github](https://github.com/jloads/get/)
  + [changelog.md](changelog.md)
- 
+
+## How to learn about jLoads?
+
++ [presentation](https://www.webslides.pl/event/2021/4developers/index.html)
++ [book](http://book.jloads.com/)
+
 ## How to use? 
 
 ### Load to Your project [get.jloads.com/jloads.min.js](https://get.jloads.com/jloads.min.js)
