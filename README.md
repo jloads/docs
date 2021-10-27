@@ -44,25 +44,26 @@ Obecnie rozwiązanie jLoads dotyczy frontendu, ale trwają pracę nad wykorzysta
 ## How to use? 
 
 ### Load to Your project [get.jloads.com/jloads.min.js](https://get.jloads.com/jloads.min.js)
-
-       <script src="//get.jloads.com/jloads.min.js">
-           // Jloads is loading any media and content dynamically
-       </script>
-
+```js
+<script src="//get.jloads.com/jloads.min.js">
+ // Jloads is loading any media and content dynamically
+</script>
+```
  
 ### [Example dependencies](https://docs.jloads.com/test.html) 
 + first is loaded jquer and after bootstrap files
 + asynchronus, without special tags, only jloads logic to controll JS loading
 
-
-       <script>
-           jl.file({
-               "//code.jquery.com/jquery-3.5.1.min.js": [
-                   "//stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js",
-                   "//stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-               ]
-           });
-       </script>
+```js
+<script>
+ jl.file({
+     "//code.jquery.com/jquery-3.5.1.min.js": [
+         "//stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js",
+         "//stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+     ]
+ });
+</script>
+```
 
 
 
@@ -123,14 +124,16 @@ klasa do utworzenia dowolnej implementacji objektu jloads
 ### jloads.obj
 loads json object from url as object
 
-            jloadsObj("json/sentence.json", function (obj, url) {
-                console.log(obj["q&a"], url);
-                each(obj["q&a"], function (v,k) {
-                    var varr = v.split(' ');
-                    console.log(k,v,varr);
-                    $('input[name="first"]').val(varr);
-                });
-            });
+```js
+jloadsObj("json/sentence.json", function (obj, url) {
+ console.log(obj["q&a"], url);
+ each(obj["q&a"], function (v,k) {
+     var varr = v.split(' ');
+     console.log(k,v,varr);
+     $('input[name="first"]').val(varr);
+ });
+});
+```
 
 ### jloads.url
 check url an load what exactly is in url
@@ -143,24 +146,26 @@ może zostać przetworzone, i np wszystkie pliki js wstępnie pobrane, by skróc
 W pliku JSON określa się selector i do niego ładuje zawartość pliku
 
 #### przykład
-    {
-      "head": [
-        "//code.jquery.com/jquery-3.5.1.min.js",
-        "//stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js",
-        "//stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css",
-        "//app.wapka.pl/css/style.css"
-      ],
-      "body": [
-        "//app.wapka.pl/html/body.html"
-      ],
-      "#form": [
-        "//app.wapka.pl/html/create.html",
-        "//app.wapka.pl/js/create.js"
-      ],
-      "#image": [
-        "//logo.wapka.pl/wapka-300.png"
-      ]
-   }
+```js
+{
+ "head": [
+   "//code.jquery.com/jquery-3.5.1.min.js",
+   "//stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js",
+   "//stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css",
+   "//app.wapka.pl/css/style.css"
+ ],
+ "body": [
+   "//app.wapka.pl/html/body.html"
+ ],
+ "#form": [
+   "//app.wapka.pl/html/create.html",
+   "//app.wapka.pl/js/create.js"
+ ],
+ "#image": [
+   "//logo.wapka.pl/wapka-300.png"
+ ]
+}
+```
    
    
 
@@ -172,52 +177,54 @@ Można określić precyzyjnie zdarzenie i zawartość jaka ma ulec zmianie
 
 #### przykład
 
-       {  
-          "#image": {
-               "onclick": {
-                        "#image.src::before": "//logo.wapka.pl/wapka-300.png"
-                      }                      
-               },
-               "hover": {
-                     "#text.src": { 
-                            "append": "//logo.wapka.pl/wapka-300.png"
-                     }                       
-              }
+```js
+  {  
+     "#image": {
+          "onclick": {
+                   "#image.src::before": "//logo.wapka.pl/wapka-300.png"
+                 }                      
           },
-          "body": {
-               "onload": [
-                    "//app.wapka.pl/js/create.js"
-               ]
-          }
-       }    
-       
-   
-   
-    { 
-        "selector" : "#image" 
-        "event" : "onclick",
-        "function": "append",
-        "selector": "#image.src"
-        "value": "//logo.wapka.pl/wapka-300.png"    
-    },
-         
+          "hover": {
+                "#text.src": { 
+                       "append": "//logo.wapka.pl/wapka-300.png"
+                }                       
+         }
+     },
+     "body": {
+          "onload": [
+               "//app.wapka.pl/js/create.js"
+          ]
+     }
+  }    
+```
+
+```js
+{ 
+   "selector" : "#image" 
+   "event" : "onclick",
+   "function": "append",
+   "selector": "#image.src"
+   "value": "//logo.wapka.pl/wapka-300.png"    
+},
+```
    
 definiowanie jaką wartość chce się zmienić, 
 jeśli się nie definiuje to dodaje standardowo jak w jloads.target 
        
-       {  
-          "#image:onclick": {
-              "#image.title::before": "//logo.wapka.pl/wapka-300.png"                                    
-          },                
-          "html:onload":[
-                "//app.wapka.pl/js/create.js"
-          ]     
-          "#image:onload": {              
-                "#image.src": "//logo.wapka.pl/wapka-300.png",
-                "#image.title::after": "image loaded"                                    
-          }   
-       }    
-
+```js
+  {  
+     "#image:onclick": {
+         "#image.title::before": "//logo.wapka.pl/wapka-300.png"                                    
+     },                
+     "html:onload":[
+           "//app.wapka.pl/js/create.js"
+     ]     
+     "#image:onload": {              
+           "#image.src": "//logo.wapka.pl/wapka-300.png",
+           "#image.title::after": "image loaded"                                    
+     }   
+  }
+```
 
 
 ### jloads.value
@@ -238,34 +245,36 @@ domyślnie dodaj element do strony
 value nie jest analizowane, tylko kolejno wstrzykiwane
 
 #### przykład
-    {
-        { "head.script.src": "//code.jquery.com/jquery-3.5.1.min.js" }, 
-        
-        { "head.script.src": "//stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" }, 
-        
-        {
-            "head.link.type": "text/css",
-            "head.link.rel": "stylesheet",  
-            "head.link.href": "//stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
-        },
-        
-        {
-            "head.link.type": "text/css",
-            "head.link.rel": "stylesheet",  
-            "head.link.href": "//app.wapka.pl/css/style.css" 
-        },
-        
-      "body": [
-        "//app.wapka.pl/html/body.html"
-      ],
-      "#form": [
-        "//app.wapka.pl/html/create.html",
-        "//app.wapka.pl/js/create.js"
-      ],
-      "#image": [
-        "//logo.wapka.pl/wapka-300.png"
-      ]
-    }
+```js
+{
+   { "head.script.src": "//code.jquery.com/jquery-3.5.1.min.js" }, 
+
+   { "head.script.src": "//stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" }, 
+
+   {
+       "head.link.type": "text/css",
+       "head.link.rel": "stylesheet",  
+       "head.link.href": "//stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+   },
+
+   {
+       "head.link.type": "text/css",
+       "head.link.rel": "stylesheet",  
+       "head.link.href": "//app.wapka.pl/css/style.css" 
+   },
+
+ "body": [
+   "//app.wapka.pl/html/body.html"
+ ],
+ "#form": [
+   "//app.wapka.pl/html/create.html",
+   "//app.wapka.pl/js/create.js"
+ ],
+ "#image": [
+   "//logo.wapka.pl/wapka-300.png"
+ ]
+}
+```
     
     
 ### jloads.form
@@ -274,53 +283,58 @@ ma pomóc w operacjach na danych wysyłanych i odbiernaych przez formularze
 
 #### ładowanie pliku po załadowaniu formularza
 dotyczy każdego formularza
-        
-        "form:onload":[
-           "//app.wapka.pl/js/create.js"
-        ]
-          
+```js        
+"form:onload":[
+ "//app.wapka.pl/js/create.js"
+]
+```
+
 #### ładowanie danych do formularza po jego załadowaniu 
 dotyczy wybranego formularza
 
-        "#form1:onload":{
-            "#form1[method]": "POST",
-            "#form1[action]": "//url",
-            "#form1 .first_name": "Tom",
-            "#form1 .last_name": "Sap",
-            "#form1 .email": "tom@sap.com",
-            "#form1 .message": "example message",
-        }  
+```js
+"#form1:onload":{
+  "#form1[method]": "POST",
+  "#form1[action]": "//url",
+  "#form1 .first_name": "Tom",
+  "#form1 .last_name": "Sap",
+  "#form1 .email": "tom@sap.com",
+  "#form1 .message": "example message",
+}  
+```
         
 lista wyboru
+```js
+"#form1:onload":{
+  "#form1 .servers":[
+      {"1":"server 1"},
+      {"2":"server 2"},
+      {"3":"server 3"}
+  ]
+}  
+```
 
-        "#form1:onload":{
-            "#form1 .servers":[
-                {"1":"server 1"},
-                {"2":"server 2"},
-                {"3":"server 3"}
-            ]
-        }  
-              
 #### wysłanie danych na podany w formularzu URL i metodą w momencie wysyłania formularza 
-      
-        "form:submit":{
-            "login": "#form1 .email",
-            "name": "#form1 .last_name",
-            "content": "#form1 .message",
-        }
-            
-       {  
-          
-          "form:submit": {
-              "#image.title::before": "//logo.wapka.pl/wapka-300.png"                                    
-          },                
-               
-          "#image:onload": {              
-                "#image.src": "//logo.wapka.pl/wapka-300.png",
-                "#image.title::after": "image loaded"                                    
-          }   
-       }    
- 
+
+```js
+   "form:submit":{
+       "login": "#form1 .email",
+       "name": "#form1 .last_name",
+       "content": "#form1 .message",
+   }
+
+  {  
+
+     "form:submit": {
+         "#image.title::before": "//logo.wapka.pl/wapka-300.png"                                    
+     },                
+
+     "#image:onload": {              
+           "#image.src": "//logo.wapka.pl/wapka-300.png",
+           "#image.title::after": "image loaded"                                    
+     }   
+  }    
+```
 
 
 ### jloads.content
@@ -353,138 +367,144 @@ poniższe przykłady pochodzą z jednego z projektów firmy [Softreck](https://s
 
 #### ładowanie skryptów do poszczególnych elementów strony poprzez xpath, gdy element nie jest jeszcze gotowy/załadowany do drzewa DOM, to jloads czeka i załaduje go gdy będzie to możliwe 
 
-        // Load core of application
-        jl.target({
-            "head": [
-                "css/fade-in.css",
-                "form/form.js",
-                "form/form.css",
-                "form/inputs.css",
-            ],
-            "#forms": {
-                "form/app.html": [
-                    "form/submit.js",
-                    "form/edit_list.js",
-                ]
-            },
-            "#messages": [
-                "js/messages.js"
-            ],
-            "#images": [
-                "//logo.faas.ovh/4/cover.png",
-            ],
-            "#menu": [
-                "html/menu.html",
-            ],
-            "footer": [
-                "html/footer.html"
-            ]
-        });
-        
+```js
+   // Load core of application
+   jl.target({
+       "head": [
+           "css/fade-in.css",
+           "form/form.js",
+           "form/form.css",
+           "form/inputs.css",
+       ],
+       "#forms": {
+           "form/app.html": [
+               "form/submit.js",
+               "form/edit_list.js",
+           ]
+       },
+       "#messages": [
+           "js/messages.js"
+       ],
+       "#images": [
+           "//logo.faas.ovh/4/cover.png",
+       ],
+       "#menu": [
+           "html/menu.html",
+       ],
+       "footer": [
+           "html/footer.html"
+       ]
+   });
+``` 
+      
 #### ładowanie skryptów w zależności od hierarchii, najpierw jQuery a następnie Bootstrap 
         
-        // load content ASAP with dependencies, that jquery must be first and after that bootstrap
-        jl.file({
-            "//code.jquery.com/jquery-3.5.1.min.js": [
-                "//stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js",
-                "//stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-            ]
-        });
+```js
+// load content ASAP with dependencies, that jquery must be first and after that bootstrap
+jl.file({
+  "//code.jquery.com/jquery-3.5.1.min.js": [
+      "//stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js",
+      "//stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+  ]
+});
+```
    
 #### ładowanie zawartości w zalezności od wywołanego url 
 
-        // Load dynamically contents depends url #hash
-        jl.url({
-            "#app": {
-                "#forms": {
-                    "form/app.html": [
-                        "form/submit.js",
-                        "form/edit_list.js"
-                    ]
-                }
-            },
-            "#app_man": {
-                "#forms": {
-                    "form/app_man.html": [
-                        "form/submit.js",
-                        "form/edit_list.js"
-                    ]
-                }
-            },
-            "#server": {
-                "#forms": {
-                    "form/server.html": [
-                        "form/submit.js",
-                        "form/edit_list.js"
-                    ]
-                }
-            },
-            "#webservice": {
-                "#forms": {
-                    "form/webservice.html": [
-                        "form/submit.js",
-                        "form/edit_list.js"
-                    ]
-                }
-            },
-            "#cloud": {
-                "#forms": {
-                    "form/cloud.html": [
-                        "form/submit.js",
-                        "form/edit_list.js"
-                    ]
-                }
-            },
-            "#local": {
-                "#forms": {
-                    "form/local.html": [
-                        "form/submit.js",
-                        "form/edit_list.js"
-                    ]
-                }
-            },
-            "#iot": {
-                "#forms": {
-                    "form/iot.html": [
-                        "form/submit.js",
-                        "form/edit_list.js"
-                    ]
-                }
-            },
-            "#api": {
-                "#forms": {
-                    "form/api.html": [
-                        "form/submit.js",
-                        "form/edit_list.js"
-                    ]
-                }
-            },
-            "#api_func": {
-                "#forms": {
-                    "form/api_func.html": [
-                        "form/submit.js",
-                        "form/edit_list.js"
-                    ]
-                }
-            },
-            "#api_storage": {
-                "#forms": {
-                    "form/api_storage.html": [
-                        "form/submit.js",
-                        "form/edit_list.js"
-                    ]
-                }
-            },
-            "#test": {
-                "#forms": {
-                    "form/test.html": [
-                        "form/submit.js",
-                        "form/edit_list.js"
-                    ]
-                }
-            }
-        });
-                
+```js
+   // Load dynamically contents depends url #hash
+   jl.url({
+       "#app": {
+           "#forms": {
+               "form/app.html": [
+                   "form/submit.js",
+                   "form/edit_list.js"
+               ]
+           }
+       },
+       "#app_man": {
+           "#forms": {
+               "form/app_man.html": [
+                   "form/submit.js",
+                   "form/edit_list.js"
+               ]
+           }
+       },
+       "#server": {
+           "#forms": {
+               "form/server.html": [
+                   "form/submit.js",
+                   "form/edit_list.js"
+               ]
+           }
+       },
+       "#webservice": {
+           "#forms": {
+               "form/webservice.html": [
+                   "form/submit.js",
+                   "form/edit_list.js"
+               ]
+           }
+       },
+       "#cloud": {
+           "#forms": {
+               "form/cloud.html": [
+                   "form/submit.js",
+                   "form/edit_list.js"
+               ]
+           }
+       },
+       "#local": {
+           "#forms": {
+               "form/local.html": [
+                   "form/submit.js",
+                   "form/edit_list.js"
+               ]
+           }
+       },
+       "#iot": {
+           "#forms": {
+               "form/iot.html": [
+                   "form/submit.js",
+                   "form/edit_list.js"
+               ]
+           }
+       },
+       "#api": {
+           "#forms": {
+               "form/api.html": [
+                   "form/submit.js",
+                   "form/edit_list.js"
+               ]
+           }
+       },
+       "#api_func": {
+           "#forms": {
+               "form/api_func.html": [
+                   "form/submit.js",
+                   "form/edit_list.js"
+               ]
+           }
+       },
+       "#api_storage": {
+           "#forms": {
+               "form/api_storage.html": [
+                   "form/submit.js",
+                   "form/edit_list.js"
+               ]
+           }
+       },
+       "#test": {
+           "#forms": {
+               "form/test.html": [
+                   "form/submit.js",
+                   "form/edit_list.js"
+               ]
+           }
+       }
+   });
+```
+          
 ## konfiguracja
 obsługiwane funkcje
 
