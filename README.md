@@ -647,15 +647,16 @@ jloads podaje dane wejsciowe, simple version only GET:
 
 more details about connections:
 
-    {        
-        "URL": "https://www.crunchbase.com/organization/openbrand",
-        "TYPE" : "GET"
-        "DATA": {                        
-            "name":"mama",
-            "type":" string"
-        
-        }
-    }    
+```js
+{        
+   "URL": "https://www.crunchbase.com/organization/openbrand",
+   "TYPE" : "GET"
+   "DATA": {                        
+       "name":"mama",
+       "type":" string"
+
+   }
+}    
 
 
 
@@ -667,64 +668,65 @@ https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event
 
 ### Przykładowe rozwiązanie zaproponowane przez @Comandeer https://github.com/Comandeer
 
-     jLoads( {
-          preload: {
-               "head": [
-                    'arkusz-stylow.css',
-                    'jakis-skrypt.js'
-               ],
-               "nav": {
-                    "navbar_search/page.html": [
-                         "navbar_search/script.js",
-                         "navbar_search/init.js"
-                    ]
-               },
-               "#breadcrumbs": [
-                    "breadcrumbs/page.html"
-               ],
-               "footer": [
-                    "page/footer.html"
+```js
+jLoads( {
+     preload: {
+          "head": [
+               'arkusz-stylow.css',
+               'jakis-skrypt.js'
+          ],
+          "nav": {
+               "navbar_search/page.html": [
+                    "navbar_search/script.js",
+                    "navbar_search/init.js"
                ]
           },
-          router: {
-               "#a": {
-                    "article": "page/editor.html"
-               },
-               "#b": {
-                    "article": {
-                         "grid/page.html": [
-                              "grid/init.js",
-                         ]
-                    }
+          "#breadcrumbs": [
+               "breadcrumbs/page.html"
+          ],
+          "footer": [
+               "page/footer.html"
+          ]
+     },
+     router: {
+          "#a": {
+               "article": "page/editor.html"
+          },
+          "#b": {
+               "article": {
+                    "grid/page.html": [
+                         "grid/init.js",
+                    ]
+               }
 
-               },
-               "#c": {
-                    "article": "grid-image/page.html"
-               },
-               "#d": {
-                    "article": "page/text.html"
-               },
-               "#e": {
-                    "#submenu": {
-                         "menu/organisation.html": [
-                              "form/submit.js"
-                         ]
-                    }
-               },
-               "#results": {
-                    "article": {
-                         "grid/page.html": [
-                              "grid/init.js",
-                         ]
-                    }
-               },
-          }
-     } );
+          },
+          "#c": {
+               "article": "grid-image/page.html"
+          },
+          "#d": {
+               "article": "page/text.html"
+          },
+          "#e": {
+               "#submenu": {
+                    "menu/organisation.html": [
+                         "form/submit.js"
+                    ]
+               }
+          },
+          "#results": {
+               "article": {
+                    "grid/page.html": [
+                         "grid/init.js",
+                    ]
+               }
+          },
+     }
+} );
 
-     // lub
+// lub
 
-     jLoads( '<URL pliku konfiguracyjnego>' );
-
+jLoads( '<URL pliku konfiguracyjnego>' );
+```
 
 
 
